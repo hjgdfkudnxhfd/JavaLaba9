@@ -3,8 +3,12 @@ body {
 }
 
 h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+label {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 form {
@@ -12,24 +16,24 @@ form {
 }
 
 input[type="text"] {
-    font-size: 16px;
-    padding: 8px;
-    width: 200px;
-    margin-right: 10px;
+    font-size: 20px;
+    padding: 10px;
+    width: 250px;
+    margin-right: 16px;
 }
 
 button {
-    font-size: 16px;
-    padding: 8px;
-    background-color: #4CAF50;
+    font-size: 20px;
+    padding: 10px;
+    background-color: cornflowerblue ;
     color: white;
-    border: none;
-    border-radius: 5px;
+    border: 2px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #3e8e41;
+    background-color: steelblue;
 }
 
 ul {
@@ -39,7 +43,7 @@ ul {
 }
 
 li {
-    font-size: 16px;
+    font-size: 20px;
     padding: 8px 16px;
     border-bottom: 1px solid #ddd;
     display: flex;
@@ -52,8 +56,15 @@ li:last-child {
 
 li input[type="checkbox"] {
     margin-right: 10px;
+    margin-left: 50px;
 }
 
 li button {
     margin-left: auto;
+    margin-right: 1275px;
+    background-color: indianred ;
+}
+
+li button:hover {
+    background-color: brown;
 }
