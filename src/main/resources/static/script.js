@@ -25,9 +25,9 @@ async function addItem() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            //То что в фигурных - аннонимный обьект, с единственным свойством name
-            //JSON.stringify - преобразует обьект в json
+
             body: JSON.stringify({ name: newItemName })
+            //JSON.stringify - преобразует обьект в json
         });
 
         if (!response.ok) {
@@ -70,7 +70,7 @@ async function editItem(id) {
         }
 
         getItems().then(data => {
-            displayList(data);
+            displayList(data); //отображения обновленного списка на странице
         });
 
     } catch (error) {
