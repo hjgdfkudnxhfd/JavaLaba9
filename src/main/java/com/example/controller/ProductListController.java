@@ -14,8 +14,8 @@ public class ProductListController {
     @Autowired
     private ProductService productService; //внедряет зависимость ProductService в контроллер
 
-    @PostMapping("/items")
-    public HttpStatus createItem(@RequestBody JSONObject jsonItem) {
+    @PostMapping("/items") //метод пост
+    public HttpStatus createItem(@RequestBody JSONObject jsonItem) { //говорю аннотацией, что в поступившем запросе тело http находится в json формате
         productService.addProduct(jsonItem.getAsString("name"));
         return HttpStatus.OK;
     }
@@ -25,17 +25,13 @@ public class ProductListController {
     public Iterable<Product> getItemList() {
         return productService.getProductList();
     }
-    @GetMapping("/items/{id}")
-    public Product getItem(@PathVariable int id) { //извлечение id из URL и передача в getItem
-        return productService.getProductById(id);
-    }
     @PutMapping("/items/{id}") //обрабатывает PUT-запросы
-    public HttpStatus markItem(@PathVariable int id) {
+    public HttpStatus markItem(@PathVariable Long id) {
         productService.markProduct(id);
         return HttpStatus.OK;
     }
     @DeleteMapping("/items/{id}") //обрабатывает DELETE-запросы
-    public HttpStatus deleteItem(@PathVariable int id) {
+    public HttpStatus deleteItem(@PathVariable Long id) {
         productService.deleteProduct(id);
         return HttpStatus.OK;
     }

@@ -26,7 +26,7 @@ async function addItem() {
                 'Content-Type': 'application/json'
             },
 
-            body: JSON.stringify({ name: newItemName })
+            body: JSON.stringify({ name: newItemName }) //тело htth запроса (json объект в теле запроса http)
             //JSON.stringify - преобразует обьект в json
         });
 
